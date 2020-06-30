@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <copyright>© {year} 권강현</copyright>
-    <lastBuildDate>Mon, 29 Jun 2020 20:01:09 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 12:55:20 +0900</lastBuildDate>
     
 	<atom:link href="https://95ganghyeon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>블로그 생성후기</title>
+      <link>https://95ganghyeon.github.io/thought/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%83%9D%EC%84%B1%ED%9B%84%EA%B8%B0/</link>
+      <pubDate>Tue, 30 Jun 2020 12:55:20 +0900</pubDate>
+      
+      <guid>https://95ganghyeon.github.io/thought/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%83%9D%EC%84%B1%ED%9B%84%EA%B8%B0/</guid>
+      <description>명지대학교에서 데이터테크놀로지과를 복수전공하면서 많은 걸 배웠다. 그중 권동섭 교수님은 단순히 지식을 가르치는 것을 떠나서, 취업을 어떤식으로 준비해야 하고 개발자라면 어떻게 성장해나가야 하는지도 가르쳐 주셨다. 많은 것을 강조하셨고, 그중 가장 기억에 남는 말이 있다.
+ &amp;ldquo;시간을 내서 웹 포트폴리오를 만들고, 평생 이력서를 수정해나가면서 성장해라.&amp;quot;
+ 그리고 오늘 그 말씀을 실천하기 위한 첫발을 내디뎠다. 앞으로 About 탭을 내가 오버라이딩 해서 포트폴리오용 페이지로 커스텀 할 것이고, 나머지 탭들은 이왕 Hugo라는 재밌는 툴로 블로그를 빌드한 김에 나도 누군가에게 도움이 될지 모르는 포스팅을 남겨보려 한다.</description>
+    </item>
     
     <item>
       <title>Hugo로 블로그 만들기</title>
@@ -20,17 +31,6 @@
       <guid>https://95ganghyeon.github.io/blog/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       <description>1. Github pages란? 개발자라면 누구나 한번쯤은 만들고 싶어하는게 개인 블로그일 것입니다. 과거부터 많은 분들이 활용하신 티스토리(tistory) 를 이용해도 되고, 요즘 잘 나가는 미디엄(Medium) 이나 브런치(brunch) 를 사용해도 됩니다. 하지만 오늘 소개할 것은 Github에서 제공하는 Github pages라는 웹 호스팅 서비스를 이용한 개인 블로그 만들기입니다.
 개발을 위해 구글링을 하다보면 &amp;lt;USERNAME&amp;gt;.github.io 형태의 도메인을 가진 블로그들을 자주 보셨을텐데요. 바로 그 블로그들이 대부분 Github pages를 이용하여 만들어진 블로그들입니다. Github pages는 깃헙 계정만 있으면 무료로 사용할 수 있고, Github pages 공식문서를 참고하면 누구나 금방 이용할 수 있을 정도로 사용방법 또한 쉽다는 장점도 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>블로그 생성 후기</title>
-      <link>https://95ganghyeon.github.io/thought/2020-06-28-%ED%9C%B4%EA%B3%A0-%EC%B2%AB-%ED%8F%AC%EC%8A%A4%ED%8C%85/</link>
-      <pubDate>Sun, 28 Jun 2020 14:12:06 +0900</pubDate>
-      
-      <guid>https://95ganghyeon.github.io/thought/2020-06-28-%ED%9C%B4%EA%B3%A0-%EC%B2%AB-%ED%8F%AC%EC%8A%A4%ED%8C%85/</guid>
-      <description>명지대학교에서 데이터테크놀로지과를 복수전공하면서 많은 걸 배웠다. 그중 권동섭 교수님은 단순히 지식을 가르치는 것을 떠나서, 취업을 어떤식으로 준비해야 하고 개발자라면 어떻게 성장해나가야 하는지도 가르쳐 주셨다. 많은 것을 강조하셨고, 그중 가장 기억에 남는 말이 있다.
- &amp;ldquo;시간을 내서 웹 포트폴리오를 만들고, 평생 이력서를 수정해나가면서 성장해라.&amp;quot;
- 그리고 오늘 그 말씀을 실천하기 위한 첫발을 내디뎠다. 앞으로 About 탭을 내가 오버라이딩 해서 포트폴리오용 페이지로 커스텀 할 것이고, 나머지 탭들은 이왕 Hugo라는 재밌는 툴로 블로그를 빌드한 김에 나도 누군가에게 도움이 될지 모르는 포스팅을 남겨보려 한다.</description>
     </item>
     
   </channel>
