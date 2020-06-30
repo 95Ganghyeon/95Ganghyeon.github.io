@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>Hugo로 블로그 만들기 | 95Ganghyeon&#39;s Blog</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="ko">
+  <meta name="description" content="Hugo로 Github pages 블로그 만들기">
+  <meta name="keywords" content="github pages , hugo , hugo 디렉토리 구조 , hugo theme">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  <meta name="google-site-verification" content="mwrGNV1fGzDIUcvPo_6QkNnczSJ6DOLabF_AgD8glYo" />
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/post.min.558ba09102ccf1d8246ec27ad049e0da0154cd3ecc53c578c2c69003f6317436.css" integrity="sha256-VYugkQLM8dgkbsJ60Eng2gFUzT7MU8V4wsaQA/YxdDY="/>
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.510f3a7ef20c2985663535a1eccf5f1ff57f6365315b8a22d2e1282d82dd4d23.css" integrity="sha256-UQ86fvIMKYVmNTWh7M9fH/V/Y2UxW4oi0uEoLYLdTSM="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/95ganghyeon.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Hugo로 블로그 만들기",
+      "headline" : "Hugo로 블로그 만들기",
+      "description" : "Hugo로 Github pages 블로그 만들기",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-06-29 20:01:09 \u002b0900 KST",
+      "dateModified" : "2020-06-29 20:01:09 \u002b0900 KST",
+      "url" : "https:\/\/95ganghyeon.github.io\/blog\/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0\/",
+      "wordCount" : "1471",
+      "keywords" : ["github pages", "hugo", "hugo 디렉토리 구조", "hugo theme", "Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+      <li>
+        <a  href="/thought">생각정리</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Hugo로 블로그 만들기</h1>
+            <time datetime="2020-06-29 20:01:09 &#43;0900 KST" class="post__date"
+            >2020년 6월 29일</time>
+          </header>
+          <article class="post__content">
+              
+<h2 id="1-github-pages란">1. Github pages란?<a class="anchor" href="#1-github-pages란">#</a></h2>
+<p>개발자라면 누구나 한번쯤은 만들고 싶어하는게 개인 블로그일 것입니다.
+과거부터 많은 분들이 활용하신 <strong>티스토리(tistory)</strong> 를 이용해도 되고, 요즘 잘 나가는 <strong>미디엄(Medium)</strong> 이나 <strong>브런치(brunch)</strong> 를 사용해도 됩니다.
+하지만 오늘 소개할 것은 <strong>Github에서 제공하는 <code>Github pages</code></strong>라는 웹 호스팅 서비스를 이용한 개인 블로그 만들기입니다.</p>
+<p>개발을 위해 구글링을 하다보면 <code>&lt;USERNAME&gt;.github.io</code> 형태의 도메인을 가진 블로그들을 자주 보셨을텐데요. 바로 그 블로그들이 대부분 <code>Github pages</code>를 이용하여 만들어진 블로그들입니다.
+<code>Github pages</code>는 깃헙 계정만 있으면 무료로 사용할 수 있고, <a href="https://pages.github.com/">Github pages 공식문서</a>를 참고하면 누구나 금방 이용할 수 있을 정도로 사용방법 또한 쉽다는 장점도 있습니다.</p>
+<p>하지만 제약사항 또한 적지 않은데요. 그중 가장 대표적인 것이 <code>Github pages</code>가 호스팅하는 웹은 <code>dynamic website(동적 웹사이트)</code>가 아니고 <code>static website(정적 웹사이트)</code>라는 것입니다. 우리가 매일같이 이용하는 <strong>Youtube</strong>나 <strong>Naver</strong>같은 사이트들은 모두 <code>dynamic website(동적 웹사이트)</code>입니다. Youtube는 로그인 한 유저가 누구냐에 따라서 서로 다른 맞춤 동영상을 추천해주고, Naver도 로그인한 유저가 누구냐에 따라서 검색어 순위를 달리 보여주기도 합니다. <strong>이처럼 같은 URL로 접속하더라도 때에 따라 dynamic하게 웹 페이지의 모습을 달리 보여줄 수 있는 이유는 웹을 호스팅하는 서버 쪽에서 이와 관련된 일을 담당해주기 때문입니다.</strong></p>
+<p>하지만 앞서 말했듯 <code>Github pages</code>는 <code>static website(정적 웹사이트)</code>를 호스팅 해줍니다. <strong>즉, 특정한 URL로 접속하면 늘 누구에게나 똑같은 웹 페이지의 모습을 보여주게 되는 것이죠.</strong> 그러나 <code>개발자 블로그</code>를 만드려는 우리에게 이는 별 문제가 되지 않습니다. 왜냐하면 우리가 블로그에 포스팅 한 글들은 대부분 개발과정에서 발생한 문제를 해결하기 위해 찾아온 개발자들에게 일방적으로 읽히기만 할 <code>문서 그 자체</code>의 역할만 하면 충분하기 때문입니다.</p>
+<p>좋습니다! <code>Github pages</code>로 나만의 <code>개발자 블로그</code>를 만들어 보죠. 그런데 밑바닥부터 모든 것을 하나하나 만들면 나름 봐줄만한 블로그 하나를 만드는데도 참 오랜 시간이 걸릴 것입니다. 나는 그냥 소소한 나만의 블로그를 만들어서 글을 쓰고 싶었는데, 웹사이트를 만드는데만 한 세월을 소비하면 안되겠죠. 다행히도 세상의 많은 사람들이 이미 손쉽게 <code>static website(정적 웹사이트)</code>를 만들 수 있는 서비스를 만들어서 제공하고 있습니다. 현재 github 별 갯수를 기준으로 가장 잘 나가고 있는 서비스는 <a href="https://jekyllrb-ko.github.io/">Jekyll</a>, <a href="https://www.gatsbyjs.org/">Gatsby</a>, <a href="https://gohugo.io/">Hugo</a> 정도가 있습니다. 이번 포스팅에서 볼 것은 <a href="https://gohugo.io/">Hugo</a>입니다.</p>
+<hr>
+<h2 id="2-hugo란">2. Hugo란?<a class="anchor" href="#2-hugo란">#</a></h2>
+<p>Hugo는 <a href="https://ko.wikipedia.org/wiki/Go_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)">Go언어</a>로 작성된 static website generator입니다.
+(Hugo를 사용하기 위해 Go언어를 배워야 할 필요는 없습니다.)</p>
+<h3 id="21-hugo로-githubio-만들기">2.1 Hugo로 Github.io 만들기<a class="anchor" href="#21-hugo로-githubio-만들기">#</a></h3>
+<p>최초에 Hugo로 Github.io를 어떻게 셋팅하는지에 대한 설명은 Github에 <a href="https://github.com/Integerous/Integerous.github.io#hugo%EB%A1%9C-githubio-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0">Jeongsu Han님께서 자세히 설명해놓은 문서</a>가 있으니 그것을 참고하면 좋겠습니다.</p>
+<p>본 포스팅에서는 위 문서를 통해 생성된 Hugo 프로젝트의 구조와 Hugo 테마를 커스텀 하는 큰 틀을 이해하는 것에 중점을 두겠습니다.</p>
+<h3 id="22-hugo-디렉토리-구조">2.2 Hugo 디렉토리 구조<a class="anchor" href="#22-hugo-디렉토리-구조">#</a></h3>
+<p>Hugo 디렉토리 구조에 대한 <a href="https://gohugo.io/getting-started/directory-structure/">공식문서</a>따르면 Hugo의 기본 디렉토리 구조는 다음과 같습니다.</p>
+<pre><code>.
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre>
+<ul>
+<li><strong>archetypes</strong>: 터미널에서 <code>$ hugo new &lt;포스팅 파일명&gt;.md</code> 명령으로 새로운 포스팅을 생성할 때, 해당 <code>&lt;포스팅 파일명&gt;.md</code>에 어떤 front matter를 기본으로 포함시킬지를 미리 적어놓은 <code>&lt;포스트 유형&gt;.md</code>파일이 위치합니다.
+<ul>
+<li><em>(참고)<a href="https://gohugo.io/content-management/front-matter/">front matter</a></em>: front matter는 블로그를 운영하면서 <code>/content</code>폴더에 생성하게 될 다양한 유형의 포스트들에 대해, 포스트 종류별로 meta data를 쉽게 정의할 수 있도록 도와줍니다. 예를 들어, 제 블로그의 경우 좌측의 &ldquo;blog&rdquo; 카테고리에 적힐 포스트들은 개발에 관련된 포스트들이라서 상대적으로 다양한 meta data를 포함하고 있으며, &ldquo;생각정리&rdquo; 카테고리에 적힐 포스트들은 혼잣말을 적어놓을 공간이라서 상대적으로 적은 meta data를 포함하고 있습니다. 즉, <code>/archetypes/blog.md</code> 파일과 <code>/archetypes/생각정리.md</code> 파일에는 서로 다른 front matter들이 적혀 있는 것입니다. 때문에 터미널에서 <code>$ hugo new blog/&lt;파일명&gt;.md</code>과 <code>$ hugo new 생각정리/&lt;파일명&gt;.md</code> 명령을 실행하면 자신이 <code>/content</code>폴더에 생성하는 포스트의 카테고리에 따라 저마다 다른 front matter파일이 딸려 들어가게 됩니다.</li>
+</ul>
+</li>
+<li><strong>config.toml</strong>: Hugo로 빌드된 사이트 전반에 걸친 설정 값들을 저장하는 파일입니다. 어떤 설정들이 가능한지는 <a href="https://gohugo.io/getting-started/configuration/">공식문서</a>에 자세히 나와있습니다. 감이 잘 잡히지 않는다면, <a href="https://themes.gohugo.io/">다양한 Hugo theme들</a>을 배포하는 레포지토리에 들어가서 Demo site(example site)에 대한 <code>config.toml</code>이 어떻게 구성되어 있는지 살펴보는 것도 나쁘지 않습니다.
+<ul>
+<li><em>(참고)TOML 파일포맷</em>: Tom’s Obvious, Minimal Language의 약자로, Github의 창업자인 Tom Preston-Werner이 만든 configuration file format입니다. JSON이나 YAML처럼 여러 설정 값들을 key-value 형태로 저장합니다. toml은 &ldquo;minimal&quot;을 지향하며 사람이 읽기 쉬운 syntax로 가독성을 높여 보다 인간 친화적인 형태를 띄고 있습니다.</li>
+</ul>
+</li>
+<li><strong>content</strong>: 터미널에서 <code>$ hugo new &lt;파일명&gt;.md</code> 명령을 통해 생성된 블로그 포스트 파일 실제로 위치하게 되는 폴더입니다.</li>
+<li><strong>data</strong>: Hugo는 <code>/data</code> 폴더에 저장되어 있는 <code>.json</code>이나 <code>.csv</code> 등의 파일들을 저장해놓고 <code>/layouts</code>의 탬플릿들에서 가져다 쓸 수 있도록 하는 기능을 제공합니다. <br>
+(만약 <code>/layouts</code>폴더에 위치하는 <code>.html</code> 탬플릿들을 수정할 필요가 발생했는데, &ldquo;2020년 축구 국가대표팀 명단&quot;을 리스트 형태로 출력해야 하는 상황이라고 쳐보죠. 수십명의 대표팀 인원들을 전부 <code>&lt;li&gt;</code>태그로 일일이 <code>.html</code>탬플릿 파일에 하드코딩하는게 적절한 방법일까요? 별로 좋지 않아보입니다. <code>2020년 축구 국가대표팀 명단.csv</code>를 만들어서 <code>/data</code>에 넣어놓고, <code>/layouts</code>의 <code>.html</code>탬플릿들에서 가져다 쓰면 되겠죠.)</li>
+<li><strong>layouts</strong>: 블로그에 실제로 적용되는 <code>.html</code> 파일들을 코딩하여 저장하게 되는 폴더입니다.</li>
+<li><strong>static</strong>: 여기에 있는 파일들은 터미널에서 <code>$ hugo -t &lt;테마 이름&gt;</code> 명령으로 실제 웹 페이지를 빌드한 이후에도 그대로 옮겨지는 파일들입니다. 주로 <code>css</code>, <code>javascript</code>, <code>image</code> 등의 파일이 위치하게 됩니다.</li>
+<li><strong>themes</strong>: <code>Git Submodule</code>로 추가한 Hugo 테마 모듈이 위치하는 폴더입니다.</li>
+</ul>
+<h3 id="23-hugo-theme-제대로-활용하기1">2.3 Hugo theme 제대로 활용하기1<a class="anchor" href="#23-hugo-theme-제대로-활용하기1">#</a></h3>
+<p>보통 Hugo를 이용하여 블로그를 만들 때, 마음에 드는 테마를 고르기 위해 참 많은 시간을 고민하곤 합니다. 그런데 막상 정말 마음에 드는 테마를 골랐다 하더라도 그것은 늘 내 마음에 들지 않는 부분이 있기 마련이고, 그것을 수정하고 싶은 마음이 생기게 됩니다. 하지만 <code>Git Submodule</code>로 가져온 <code>/themes/&lt;테마이름&gt;</code> 폴더의 내용을 직접 수정하는 것은 바람직 하지 않습니다. Hugo 테마를 Submodule로 관리하는 것의 이점은 테마를 관리하는 레포짙토리에서 새로운 커밋으로 업데이트가 발생하면 그것을 바로 현재 자신의 프로젝트에 반영할 수 있다는 것입니다.</p>
+<p>그런데 만약 자신이 기존에 submodule을 추가하며 생성된 master branch에서 별도의 branch를 새로 생성하지 않은 채 master branch에서 그대로 <code>/themes/&lt;테마이름&gt;</code>의 내용을 수정하다가 Submodule을 업데이트 해버리면, Submodule 원격저장소의 내용이 지금까지 열심히 작업한 내용을 그대로 덮어써버리면서 그간의 수고가 물거품이 될 수 있습니다.(자세한 이유가 알고 싶다면 <a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-%EC%84%9C%EB%B8%8C%EB%AA%A8%EB%93%88">공식문서</a>를 참조하세요.)</p>
+<p>물론 <code>/themes/&lt;테마이름&gt;</code> 폴더에서 <code>별도의 branch</code>를 생성하여 해당 branch에서 폴더의 내용을 수정하면서, <code>master branch</code>에서는 Submodule 원격저장소의 업데이트 내용을 받아온 뒤, 두 branch를 직접 merge하는 방법을 쓸 수도 있습니다. 하지만 Hugo는 더 좋은 방법을 제안합니다. <strong>결론부터 말하자면 Hugo에서는 테마를 수정하기 위해 <code>/themes/&lt;테마이름&gt;</code> 폴더를 직접 수정할 필요가 거의 없습니다.</strong></p>
+<h3 id="24-hugo-theme-제대로-활용하기2">2.4 Hugo theme 제대로 활용하기2<a class="anchor" href="#24-hugo-theme-제대로-활용하기2">#</a></h3>
+<p>다음 내용을 받아들이면 <code>/themes/&lt;테마이름&gt;</code>에 대한 직접적인 수정 없이 테마를 손쉽게 커스텀 할 수 있습니다.</p>
+<pre><code>1. `/themes/&lt;테마이름&gt;`도 작은 Hugo project라고 생각하면 편하다.
+2. Hugo가 페이지를 랜더링 하기 위해 디렉토리를 탐색하는 순서를 알면 편하다.
+</code></pre>
+<p>Hugo theme 제작자들마다 테마를 효과적으로 만들기 위해 사용한 디렉토리 구조가 저마다 조금씩 다릅니다. 하지만 테마 탬플릿 <code>html파일들</code>을 저장하고 있는 <code>/layout</code>폴더와 해당 <code>html파일들</code>을 꾸며주는 <code>CSS류 파일</code>이 들어있는 폴더는 반드시 있을 것입니다. 우리는 테마를 우리 입맛대로 커스텀 하기 위해 해당 파일들을 <strong>마치 오버라이딩 하듯이</strong> 수정해줄 것입니다. 즉 수정하고 싶은 <code>/themes/&lt;테마이름&gt;/~</code>의 파일들을 나의 본 프로젝트 경로인 <code>/~</code>에서 동일한 경로에 대응시켜 똑같은 파일을 생성하고 수정하는 것입니다.</p>
+<p>(예를 들어, <code>/themes/&lt;테마이름&gt;/layout/index.html</code>을 수정하고 싶으면 해당 파일을 복사해서, <code>/layout/index.html</code>을 만든 뒤 붙여넣어서 <code>/layout/index.html</code> 파일을 수정해주면 되는 것입니다.)<br>(예를 들어, <code>/themes/&lt;테마이름&gt;/asset/scss/index.scss</code>을 수정하고 싶으면, 나의 본 프로젝트 경로인 <code>/~</code>에도 똑같은 경로를 생성해서 <code>/asset/scss/index.scss</code>에 복사 붙여넣기 한 뒤 그 파일을 수정해주면 되는 것입니다.)</p>
+<p>이러한 방식이 동작하는 이유는 Hugo가 URL에 맞는 탬플릿을 랜더링할 때, 디렉토리의 어디를 어느 순서로 찾아보는지를 알면 쉽게 이해할 수 있습니다. <a href="https://gohugo.io/templates/views/#which-template-will-be-rendered">Hugo 공식문서</a>에 따르면 Hugo가 URL에 맞는 탬플릿을 랜더링할 때 디렉토리를 탐색하는 순서는 다음과 같습니다.</p>
+<pre><code>1. /layouts/&lt;TYPE&gt;/&lt;VIEW&gt;.html`
+2. /layouts/_default/&lt;VIEW&gt;.html`
+3. /themes/&lt;THEME&gt;/layouts/&lt;TYPE&gt;/&lt;VIEW&gt;.html`
+4. /themes/&lt;THEME&gt;/layouts/_default/&lt;VIEW&gt;.html
+</code></pre>
+<p>Hugo는 탬플릿을 랜더링 할 때, 우리의 본 프로젝트 디렉토리에 있는 <code>/layout</code> 폴더를 먼저 탐색하고 만약 거기에 찾는 내용이 없다면, 그 다음에 <code>/themes/&lt;테마이름&gt;/layouts</code> 폴더를 탐색하게 됩니다.</p>
+<p>위의 예를 다시 한번 살펴보면, <code>/themes/&lt;테마이름&gt;/layout/index.html</code>을 수정하고 싶어서 <code>/layout/index.html</code>에 파일을 복붙하고 수정해주었다면, Hugo는 탬플릿을 랜더링할 때 1,2번 단에서 벌써 찾고 있던 탬플릿(커스텀 된 탬플릿)을 찾았기 때문에 굳이 3,4번 단에 가서 원본 탬플릿을 찾아 랜더링 하지 않는 것입니다.</p>
+<p>이 방법을 사용해서 테마를 내 입맛대로 커스텀 했다면, 추후에 hugo theme submodule을 업데이트 해도 내 본 프로젝트에 critical한 issue가 생기는 것은 어느정도 방지할 수 있겠죠?</p>
+<hr>
+<h2 id="3-utterances">3. Utterances<a class="anchor" href="#3-utterances">#</a></h2>
+<p>블로그를 만들었으니 댓글 정도는 달 수 있게 만들어야겠죠. 하지만 댓글 기능을 from scratch 수준으로 직접 구현하여 사용하는 것은 상당히 귀찮고 복잡한 과정을 수반합니다. 그래서 보통은 Github pages로 만들어진 블로그에 안정적으로 댓글 서비스를 운영하기 위해 외부 컴포넌트를 가져다가 넣곤 합니다.</p>
+<h3 id="31-disqus와-utterances-비교">3.1 Disqus와 Utterances 비교<a class="anchor" href="#31-disqus와-utterances-비교">#</a></h3>
+<p>제일 유명한 서비스는 <a href="https://disqus.com/">Disqus</a>입니다. 하지만 제 기준으로 댓글창 디자인이 이쁘지 않고 <del>(개인적인 생각입니다^^;)</del>, 오래된 서비스인만큼 기능이 많긴 하지만 반대로 댓글창 주제에 필요 이상으로 무거운 것도 사실입니다.</p>
+<p>그래서 오늘 소개할 서비스는 오픈소스 프로젝트인 <a href="https://utteranc.es/">utterances</a>입니다. <code>Disqus</code>와 비교하여 <code>utterances</code>가 가지는 핵심적인 차이점은 다음과 같습니다.</p>
+<ul>
+<li>댓글을 남길 수 있는 조건
+<ul>
+<li><code>Disqus</code>: Facebook, Twitter, Google 아이디만 있으면 누구나 댓글을 남길 수 있음</li>
+<li><code>utterances</code>: 오직 Github 아이디로만 댓글을 남길 수 있음</li>
+</ul>
+</li>
+<li>댓글 관리 방법
+<ul>
+<li><code>Disqus</code>: 별도의 개인 Disqus 웹페이지를 이용하여 관리됨</li>
+<li><code>utterances</code>: 자신이 연결한 Github repository에서 <code>issues</code>로 관리됨</li>
+</ul>
+</li>
+</ul>
+<p>Github 아이디가 있어야만 댓글을 남길 수 있다는 것은 상당한 제약사항입니다. 본인이 <code>Github pages</code>로 만든 블로그가 개발 관련 포스팅만이 주를 이루는 블로그라면 큰 문제가 되지는 않을 것입니다. <del>(왜냐하면 개발 포스팅 보러 오신 분들은 대부분 Github 아이디가 있으실테니까요?)</del></p>
+<p>그리고 실제로도 많은 개발 블로그를 운영하는 많은 분들이 <code>Disqus</code>에서 <code>Utterances</code>로 옮겨가는 추세인 것 같습니다. 하지만 만약 일상적인 내용의 포스팅도 블로그에 올리실거라면 <code>Utterances</code>보다는 좀더 범용적인 플랫폼의 계정으로 댓글을 남길 수 있는 <code>Disqus</code>가 더 나은 선택이 될 수 있습니다.</p>
+<h3 id="32-utterances-적용방법">3.2 Utterances 적용방법<a class="anchor" href="#32-utterances-적용방법">#</a></h3>
+<ol>
+<li>Github에 댓글을 관리할 빈 레포지토리를 생성합니다. 예)<code>&lt;USERNAME&gt;/blog_comments</code></li>
+<li>방금 생성한 레포지토리에 <a href="https://github.com/apps/utterances">utterances app</a>을 설치해줍니다.</li>
+<li>설치후 자동으로 리다리렉트 되는 <a href="https://utteranc.es/">utterances 페이지</a>에서 <code>configuration</code> 탭 부터 차분히 읽어가면서 하나하나 값을 넣어주고, 마지막 <code>Enable Utterances</code> 탭에 자동으로 생성된 <code>&lt;script ...&gt;&lt;script&gt;</code> 태그를 복사합니다.</li>
+<li>복사한 <code>&lt;script ...&gt;&lt;script&gt;</code> 태그를 원하는 <code>탬플릿.html</code> 파일의 적절한 위치에 붙여넣기 해줍니다.</li>
+</ol>
+<p>여기서도 마찬가지로 댓글창을 생성하는 <code>&lt;script ...&gt;&lt;script&gt;</code> 태그를 <code>/themes/&lt;테마이름&gt;/layout/post.html</code>에 바로 붙여넣으실 필요가 없습니다. <strong>댓글창 추가하기</strong>를 <strong>2.4 Hugo theme 제대로 활용하기2</strong>의 연장선에서 생각하면, <code>/layout/post.html</code>에 원본파일을 복붙해놓고 그곳에 <code>&lt;script ...&gt;&lt;script&gt;</code> 태그를 넣어주는 것이 더 나은 방법이라는 것을 알 수 있을 것입니다.</p>
+<p>결국은 <strong>댓글창 추가하기</strong>나 추후에 <strong>구글 애드센스로 광고넣기</strong> 같은 작업들도 모두 같은 맥락으로 진행할 수 있습니다.</p>
+<hr>
+<h2 id="4-마치며">4. 마치며<a class="anchor" href="#4-마치며">#</a></h2>
+<p>컴퓨터를 배우는 사람들은 웹에 있는 게시글들의 도움을 받기 마련입니다. 저 또한 많은 분들로부터 도움을 받았는데요, 앞으로 저도 되도록 많은 글을 써서 지금까지 쌓인 글 빚을 갚을 수 있도록 노력해야겠습니다.</p>
+
+
+              
+          </article>
+
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        
+        <a class="tag__link" href="https://95ganghyeon.github.io/tags/hugo/">Hugo</a>
+    </li></ul>
+
+ 
+          
+          
+          <script
+          src="https://utteranc.es/client.js"
+          repo="95Ganghyeon/Ganghyeon_blog_comments"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+            </script>
+            
+          <div class="pagination">
+  
+
+  
+</div>
+
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+  
+     
+    
+      <a class="social-icons__icon" title="GitHub"
+         style="background-image: url(/images/social/github.svg)" 
+         href="https://github.com/95Ganghyeon"
+         target="_blank" rel="noopener">
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__icon" title="Email"
+         style="background-image: url(/images/social/email.svg)" 
+         href="mailto:kgh9959@naver.com"
+         target="_blank" rel="noopener">
+      </a>
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+     
+</div>
+
+            <p>© 2020 권강현</p>
+          </footer>
+          </div>
+      </div>
+      
+      <div class="toc-container">
+        
+        
+        <div>[목차]</div>
+
+          
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-github-pages란">1. Github pages란?</a></li>
+    <li><a href="#2-hugo란">2. Hugo란?</a>
+      <ul>
+        <li><a href="#21-hugo로-githubio-만들기">2.1 Hugo로 Github.io 만들기</a></li>
+        <li><a href="#22-hugo-디렉토리-구조">2.2 Hugo 디렉토리 구조</a></li>
+        <li><a href="#23-hugo-theme-제대로-활용하기1">2.3 Hugo theme 제대로 활용하기1</a></li>
+        <li><a href="#24-hugo-theme-제대로-활용하기2">2.4 Hugo theme 제대로 활용하기2</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-utterances">3. Utterances</a>
+      <ul>
+        <li><a href="#31-disqus와-utterances-비교">3.1 Disqus와 Utterances 비교</a></li>
+        <li><a href="#32-utterances-적용방법">3.2 Utterances 적용방법</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-마치며">4. 마치며</a></li>
+  </ul>
+</nav>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+    <script src="/js/table-of-contents.js"></script>
+  
+
+</body>
+
+</html>

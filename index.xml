@@ -5,25 +5,25 @@
     <link>https://95ganghyeon.github.io/</link>
     <description>Recent content on 95Ganghyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-KR</language>
+    <language>ko</language>
     <copyright>© {year} 권강현</copyright>
-    <lastBuildDate>Mon, 29 Jun 2020 16:32:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2020 20:01:09 +0900</lastBuildDate>
     
 	<atom:link href="https://95ganghyeon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>2020 06 29 공개용 테스트</title>
-      <link>https://95ganghyeon.github.io/blog/2020-06-29-%EA%B3%B5%EA%B0%9C%EC%9A%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
-      <pubDate>Mon, 29 Jun 2020 16:32:06 +0900</pubDate>
+      <title>Hugo로 블로그 만들기</title>
+      <link>https://95ganghyeon.github.io/blog/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <pubDate>Mon, 29 Jun 2020 20:01:09 +0900</pubDate>
       
-      <guid>https://95ganghyeon.github.io/blog/2020-06-29-%EA%B3%B5%EA%B0%9C%EC%9A%A9-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
-      <description>아무거나
-if a == 1{ b += 1 }  </description>
+      <guid>https://95ganghyeon.github.io/blog/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <description>1. Github pages란? 개발자라면 누구나 한번쯤은 만들고 싶어하는게 개인 블로그일 것입니다. 과거부터 많은 분들이 활용하신 티스토리(tistory) 를 이용해도 되고, 요즘 잘 나가는 미디엄(Medium) 이나 브런치(brunch) 를 사용해도 됩니다. 하지만 오늘 소개할 것은 Github에서 제공하는 Github pages라는 웹 호스팅 서비스를 이용한 개인 블로그 만들기입니다.
+개발을 위해 구글링을 하다보면 &amp;lt;USERNAME&amp;gt;.github.io 형태의 도메인을 가진 블로그들을 자주 보셨을텐데요. 바로 그 블로그들이 대부분 Github pages를 이용하여 만들어진 블로그들입니다. Github pages는 깃헙 계정만 있으면 무료로 사용할 수 있고, Github pages 공식문서를 참고하면 누구나 금방 이용할 수 있을 정도로 사용방법 또한 쉽다는 장점도 있습니다.</description>
     </item>
     
     <item>
-      <title>Hugo&#43;github pages로 블로그 구축한 후기</title>
+      <title>블로그 생성 후기</title>
       <link>https://95ganghyeon.github.io/thought/2020-06-28-%ED%9C%B4%EA%B3%A0-%EC%B2%AB-%ED%8F%AC%EC%8A%A4%ED%8C%85/</link>
       <pubDate>Sun, 28 Jun 2020 14:12:06 +0900</pubDate>
       

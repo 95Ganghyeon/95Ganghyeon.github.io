@@ -5,26 +5,17 @@
     <link>https://95ganghyeon.github.io/tags/</link>
     <description>Recent content in Tags on 95Ganghyeon&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-KR</language>
+    <language>ko</language>
     <copyright>© {year} 권강현</copyright>
-    <lastBuildDate>Mon, 29 Jun 2020 16:32:06 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2020 20:01:09 +0900</lastBuildDate>
     
 	<atom:link href="https://95ganghyeon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>한글태그</title>
-      <link>https://95ganghyeon.github.io/tags/%ED%95%9C%EA%B8%80%ED%83%9C%EA%B7%B8/</link>
-      <pubDate>Mon, 29 Jun 2020 16:32:06 +0900</pubDate>
-      
-      <guid>https://95ganghyeon.github.io/tags/%ED%95%9C%EA%B8%80%ED%83%9C%EA%B7%B8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hugo</title>
       <link>https://95ganghyeon.github.io/tags/hugo/</link>
-      <pubDate>Sun, 28 Jun 2020 14:12:06 +0900</pubDate>
+      <pubDate>Mon, 29 Jun 2020 20:01:09 +0900</pubDate>
       
       <guid>https://95ganghyeon.github.io/tags/hugo/</guid>
       <description></description>
