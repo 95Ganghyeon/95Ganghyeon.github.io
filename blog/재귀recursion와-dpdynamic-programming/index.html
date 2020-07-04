@@ -64,7 +64,7 @@
       "datePublished": "2020-07-04 17:13:56 \u002b0900 KST",
       "dateModified" : "2020-07-04 17:13:56 \u002b0900 KST",
       "url" : "https:\/\/95ganghyeon.github.io\/blog\/%EC%9E%AC%EA%B7%80recursion%EC%99%80-dpdynamic-programming\/",
-      "wordCount" : "450",
+      "wordCount" : "453",
       "keywords" : ["재귀", "다이나믹 프로그래밍", "동적 계획법", "recursion", "dynamic programming", "Blog"]
     }
   
@@ -156,7 +156,7 @@ for test_case in range(1, T + 1):
     print(f&quot;#{test_case} {result}&quot;)
 </code></pre>
 <p>코드의 리팩토링이 필요하긴 하지만 우선 제대로 동작하는 코드가 완성되었다. 하지만 이대로 SWEA에 제출하니까 <code>RuntimeError</code>가 뜨면서 제출이 Fail되었다.
-사실 이미 샘플 데이터를 가지고 해당 코드를 테스트를 할 때부터 재귀의 깊이가 깊어지면서 수행시간이 길어지는 느낌을 받았기 때문이다.</p>
+사실 이미 샘플 데이터를 가지고 해당 코드를 테스트를 할 때부터 재귀의 깊이가 깊어지면서 수행시간이 길어지는 느낌을 받았기 때문에 어느정도 예상하던 결과였다.</p>
 <p>어떻게 하면 수행시간을 줄일 수 있을까 고민하던 찰나, 다이나믹 프로그래밍(Dynamic Programming, 동적계획법)이 떠올랐다.
 명지대에서 알고리즘 수업을 수강할 때, 이강선 교수님은 이런 말씀을 하셨던 것 같다.</p>
 <blockquote>
