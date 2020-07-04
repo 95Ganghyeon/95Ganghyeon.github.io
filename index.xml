@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <copyright>© {year} 권강현</copyright>
-    <lastBuildDate>Tue, 30 Jun 2020 12:55:20 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2020 17:13:56 +0900</lastBuildDate>
     
 	<atom:link href="https://95ganghyeon.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>재귀(Recursion)와 DP(Dynamic Programming)</title>
+      <link>https://95ganghyeon.github.io/blog/%EC%9E%AC%EA%B7%80recursion%EC%99%80-dpdynamic-programming/</link>
+      <pubDate>Sat, 04 Jul 2020 17:13:56 +0900</pubDate>
+      
+      <guid>https://95ganghyeon.github.io/blog/%EC%9E%AC%EA%B7%80recursion%EC%99%80-dpdynamic-programming/</guid>
+      <description>평화로운 주말, 알고리즘 문제나 풀면서 놀아볼까란 생각에 삼성 SW Expert Academy에 들어가서 문제를 풀기 시작했다.
+우선 쉬운문제부터 찬찬히 머리를 풀고 어려운 문제를 풀기 시작하려 했는데, 쉽다고 생각했던 문제에서 오랜만에 잊고 지냈던 것이 떠올라서 글을 적어본다. 삼성 SW Expert Academy의 1859번. 백만장자 프로젝트가 바로 문제의 그것이었다. 문제를 이해하는 것은 전혀 어렵지 않았다.
+나는 명지대에서 알고리즘 수업을 수강할 때, 이강선 교수님이 이런 말씀을 해주셨던 것을 기억하고 있다.
+ &amp;ldquo;인간이 어떻게 생각하는지를 차분히 잘개 쪼개서 생각해 본 다음에 코드로 풀어봐라&amp;rdquo;</description>
+    </item>
     
     <item>
       <title>블로그 생성후기</title>

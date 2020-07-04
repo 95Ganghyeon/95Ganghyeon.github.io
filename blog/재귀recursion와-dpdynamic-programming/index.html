@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>재귀(Recursion)와 DP(Dynamic Programming) | 95Ganghyeon&#39;s Blog</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="ko">
+  <meta name="description" content="재귀와 DP의 차이">
+  <meta name="keywords" content="재귀 , 다이나믹 프로그래밍 , 동적 계획법 , recursion , dynamic programming">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  <meta name="google-site-verification" content="mwrGNV1fGzDIUcvPo_6QkNnczSJ6DOLabF_AgD8glYo" />
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/post.min.558ba09102ccf1d8246ec27ad049e0da0154cd3ecc53c578c2c69003f6317436.css" integrity="sha256-VYugkQLM8dgkbsJ60Eng2gFUzT7MU8V4wsaQA/YxdDY="/>
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.510f3a7ef20c2985663535a1eccf5f1ff57f6365315b8a22d2e1282d82dd4d23.css" integrity="sha256-UQ86fvIMKYVmNTWh7M9fH/V/Y2UxW4oi0uEoLYLdTSM="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/95ganghyeon.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "재귀(Recursion)와 DP(Dynamic Programming)",
+      "headline" : "재귀(Recursion)와 DP(Dynamic Programming)",
+      "description" : "재귀와 DP의 차이",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-07-04 17:13:56 \u002b0900 KST",
+      "dateModified" : "2020-07-04 17:13:56 \u002b0900 KST",
+      "url" : "https:\/\/95ganghyeon.github.io\/blog\/%EC%9E%AC%EA%B7%80recursion%EC%99%80-dpdynamic-programming\/",
+      "wordCount" : "450",
+      "keywords" : ["재귀", "다이나믹 프로그래밍", "동적 계획법", "recursion", "dynamic programming", "Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+      <li>
+        <a  href="/thought">생각정리</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">재귀(Recursion)와 DP(Dynamic Programming)</h1>
+            <time datetime="2020-07-04 17:13:56 &#43;0900 KST" class="post__date"
+            >2020년 7월 4일</time>
+          </header>
+          <article class="post__content">
+              
+<p>평화로운 주말, 알고리즘 문제나 풀면서 놀아볼까란 생각에 <a href="https://swexpertacademy.com/main/main.do">삼성 SW Expert Academy</a>에 들어가서 문제를 풀기 시작했다.</p>
+<p>우선 쉬운문제부터 찬찬히 머리를 풀고 어려운 문제를 풀기 시작하려 했는데, 쉽다고 생각했던 문제에서 오랜만에 잊고 지냈던 것이 떠올라서 글을 적어본다.
+삼성 SW Expert Academy의 <code>1859번. 백만장자 프로젝트</code>가 바로 문제의 그것이었다. 문제를 이해하는 것은 전혀 어렵지 않았다.</p>
+<p>나는 명지대에서 알고리즘 수업을 수강할 때, 이강선 교수님이 이런 말씀을 해주셨던 것을 기억하고 있다.</p>
+<blockquote>
+<p><em>&ldquo;인간이 어떻게 생각하는지를 차분히 잘개 쪼개서 생각해 본 다음에 코드로 풀어봐라&rdquo;</em></p>
+</blockquote>
+<h2 id="재귀recursion을-이용한-분할-정복-풀이">재귀(recursion)을 이용한 &lsquo;분할 정복&rsquo; 풀이<a class="anchor" href="#재귀recursion을-이용한-분할-정복-풀이">#</a></h2>
+<p><code>1859번. 백만장자 프로젝트</code>은 그다지 어려운 문제가 아니었기 때문에, 그냥 인간이 생각하는대로 코드를 줄줄 써내려 갔다.
+그 결과 재귀적으로 문제를 해결하는 코드가 완성되었다.</p>
+<pre><code class="language-python">def calculate(nums, total_profit):
+    # base case
+    if len(nums) == 0 or len(nums) == 1:
+        return total_profit
+    
+    # recursive case
+    max_index = nums.index(max(nums))
+    buy_list = nums[:max_index]
+
+    if len(buy_list) == 0:
+        return calculate(nums[max_index+1:], total_profit)
+    else:
+        buying_amount = 0
+        for i in buy_list:
+            buying_amount += i
+
+        selling_price = nums[max_index]
+        profit = (selling_price * max_index) - buying_amount
+        total_profit += profit 
+        return calculate(nums[max_index+1:], total_profit)
+
+
+T = int(input())
+for test_case in range(1, T + 1):
+    N = int(input())
+    nums = list(map(int, sys.stdin.readline().split()))
+    result = calculate(nums, 0)
+    print(f&quot;#{test_case} {result}&quot;)
+</code></pre>
+<p>코드의 리팩토링이 필요하긴 하지만 우선 제대로 동작하는 코드가 완성되었다. 하지만 이대로 SWEA에 제출하니까 <code>RuntimeError</code>가 뜨면서 제출이 Fail되었다.
+사실 이미 샘플 데이터를 가지고 해당 코드를 테스트를 할 때부터 재귀의 깊이가 깊어지면서 수행시간이 길어지는 느낌을 받았기 때문이다.</p>
+<p>어떻게 하면 수행시간을 줄일 수 있을까 고민하던 찰나, 다이나믹 프로그래밍(Dynamic Programming, 동적계획법)이 떠올랐다.
+명지대에서 알고리즘 수업을 수강할 때, 이강선 교수님은 이런 말씀을 하셨던 것 같다.</p>
+<blockquote>
+<p><em>&ldquo;재귀적 프로그래밍에서 깊이로 인한 문제점을 발견했을 때 대응할 수 있는 방법으로 <strong>다이나믹 프로그래밍</strong>이 있다.&quot;</em> <br>
+<em>&quot;<strong>문제를 거꾸로 생각해서 접근하면</strong>, 아주 깊은 재귀로 풀어야 할 것 같던 문제가 간단한 반복문 하나로 풀릴 수도 있다.&quot;</em></p>
+</blockquote>
+<h2 id="dp스러운-풀이">&lsquo;DP스러운&rsquo; 풀이<a class="anchor" href="#dp스러운-풀이">#</a></h2>
+<p>문제를 거꾸로 생각해서 접근했고, <code>profit</code>변수를 결정하는 방법도 훨씬 간명한 방법으로 바꾸니 굉장히 심플한 코드가 완성되었다.</p>
+<pre><code class="language-python">T = int(input())
+for test_case in range(1, T + 1):
+    N = int(input())
+    nums = list(map(int, input().split(' ')))[::-1]  # 뒤에서부터 탐색
+
+    profit = 0
+    now_max = nums[0]
+
+    for i in range(1, N):
+        if now_max &gt; nums[i]:
+            profit += now_max - nums[i]
+        else:
+            now_max = nums[i]    
+
+    print(f&quot;#{test_case} {profit}&quot;)
+</code></pre>
+<p>내가 봐도 위의 코드보다 훨씬 가독성도 좋은 코드고, 모든 input에 대해 for문 하나만 돌면 되기 때문에 <em><code>O(n)</code></em>으로 성능도 뛰어나다.
+실제로 SWEA에서 제공한 샘플 데이터로 두 코드의 수행시간을 체크해보았더니 <strong>&lsquo;DP스러운&rsquo; 풀이가 4배정도 빠른 수행시간을 보이는 것으로 나타났다.</strong>
+그리고 당연히 SWEA에 제출했을 때도 <code>RuntimeError</code> 없이 정상적으로 제출이 Pass되었다.</p>
+<pre><code>재귀(recursion)을 이용한 풀이
+: 5.146684506000001 ms
+
+DP스러운 풀이
+: 1.349435233 ms
+</code></pre>
+<h2 id="정리">정리<a class="anchor" href="#정리">#</a></h2>
+<p>내가 계속 &lsquo;DP스러운&rsquo; 풀이라고 하는 이유는 위의 풀이가 엄밀하게 따졌을 때 다이나믹 프로그래밍(DP)이라고 하기에는 문제가 있기 때문이다.
+그래도 오랜만에 쉬운 알고리즘 문제로 머리 좀 풀어 보려다가 잠시 잊고 지냈던 <code>재귀와 다이나믹 프로그래밍(DP)</code>이라는 주제를 떠올릴 수 있었다.
+간만에 알고리즘 수업자료를 다시 꺼내어 하나 둘 살펴보니 기억이 새록새록 난다. 이제 다른 문제를 풀러가야겠다.</p>
+
+
+              
+          </article>
+
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        
+        <a class="tag__link" href="https://95ganghyeon.github.io/tags/algorithm/">algorithm</a>
+    </li>
+    <li class="tag__item">
+        
+        <a class="tag__link" href="https://95ganghyeon.github.io/tags/swea/">SWEA</a>
+    </li></ul>
+
+ 
+          
+          
+          <script
+          src="https://utteranc.es/client.js"
+          repo="95Ganghyeon/Ganghyeon_blog_comments"
+          issue-term="title"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+            </script>
+            
+          <div class="pagination">
+  
+    <a class="pagination__item" href="https://95ganghyeon.github.io/blog/hugo%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">Hugo로 블로그 만들기</span>
+    </a>
+  
+
+  
+</div>
+
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+  
+     
+    
+      <a class="social-icons__icon" title="GitHub"
+         style="background-image: url(/images/social/github.svg)" 
+         href="https://github.com/95Ganghyeon"
+         target="_blank" rel="noopener">
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__icon" title="Email"
+         style="background-image: url(/images/social/email.svg)" 
+         href="mailto:kgh9959@naver.com"
+         target="_blank" rel="noopener">
+      </a>
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+     
+</div>
+
+            <p>© 2020 권강현</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+</body>
+
+</html>
